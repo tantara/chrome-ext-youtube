@@ -1,0 +1,23 @@
+{
+	"name":"Youtube Downloader",
+	"description":"Simple Youtube Downlode Tool",
+	"version":"1.0",
+	"manifest_version":2,
+	"icons":{
+		"19":"icon-19x18.png",
+		"48":"icon-48x48.png",
+		"128":"icon-128x128.png"
+	},
+	"browser_action": {
+		"default_icon":"icon-19x19.png",
+		"default_title":"YoutubeDownloader"
+	},
+	"background": {
+		"page":"background.html"
+	},
+	"content_scripts": [{
+	"matches": ["http://www.youtube.com/*", "http://youtube.com/*", "https://www.youtube.com/*", "https://youtube.com/*"],
+	"js": ["jquery.js", "downloder.js"]
+	}],
+	"permissions": ["tabs", "storage"]
+}
